@@ -12,9 +12,11 @@ Dark green: #28b485
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 62.5%;
+}
 
 body{
-    font-size: 16px;
     font-weight: 400;
     font-family: 'Luto', sans-serif;
     padding: 20px;
@@ -28,15 +30,15 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /*use 'clippy css' to set it*/
     position: relative;
 }
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 40px;
     left: 40px;
 }
-.logo-box img{
+.header__logo{
     height: 40px;
 }
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -49,16 +51,16 @@ body{
     backface-visibility: hidden;
     margin-bottom: 2.2rem;
 }
-.header-primary span:first-child{
+.header-primary--main{
     display: block;
-    font-size: 3.5rem;
+    font-size: 6rem;
     letter-spacing: 2.2rem;
     font-weight: 400;
     animation: moveToRight 1s ease-out;
 }
-.header-primary span:last-child{
+.header-primary--sub{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 1.1rem;
     animation: moveToLeft 1s ease-out;
@@ -68,7 +70,7 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     padding: .8rem 3rem;
-    font-size: .9rem;
+    font-size: 1.5rem;
     display: inline-block;
     border-radius: 6rem;
     transition: all .4s;
@@ -82,7 +84,7 @@ body{
     transform: translateY(-1px);
     box-shadow: 3px 3px 4px 1px;
 }
-.btn-white{
+.btn--white{
     background-color: #fff;
     color: rgb(2, 109, 2);
 }
@@ -102,10 +104,10 @@ body{
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-.btn-white::after{
+.btn--white::after{
     background-color: #fff;
 }
-.btn-animation{
+.btn--animation{
    animation: moveButtonDown .4s ease-out .75s;
    animation-fill-mode: backwards;
 }
@@ -150,5 +152,16 @@ body{
     100%{
         transform: translateY(0);
         opacity: 1;
+    }
+}
+@media screen and (max-width: 780px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    html{
+        font-size: 30%;
     }
 }
