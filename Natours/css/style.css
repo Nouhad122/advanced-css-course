@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-weight: 400;
+  font-family: 'Luto', sans-serif;
+  padding: 20px;
+  line-height: 1.7; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #7ed56fa0,
+    #28b485a0),
+    url('../img/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  /*use 'clippy css' to set it*/
+  position: relative; }
+
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px; }
+
+.header__logo {
+  height: 40px; }
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.header-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 2.2rem; }
+
+.header-primary--main {
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 2.2rem;
+  font-weight: 400;
+  animation: moveToRight 1s ease-out; }
+
+.header-primary--sub {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1.1rem;
+  animation: moveToLeft 1s ease-out; }
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .8rem 3rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-radius: 6rem;
+  transition: all .4s;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 4px 11px 1px #000; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 4px 1px; }
+
+.btn--white {
+  background-color: #fff;
+  color: #000; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 6rem;
+  transition: all .4s; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn--white::after {
+  background-color: #fff; }
+
+.btn--animation {
+  animation: moveButtonDown .4s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0; }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0; }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveButtonDown {
+  0% {
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 50%; } }
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 30%; } }
