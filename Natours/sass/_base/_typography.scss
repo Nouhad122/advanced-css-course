@@ -1,0 +1,29 @@
+body{
+    font-weight: 400;
+    font-family: 'Luto', sans-serif;
+    padding: 20px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+
+.header-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 2.2rem;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 2.2rem;
+        font-weight: 400;
+        animation: moveToRight 1s ease-out;
+    }
+    &--sub{
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 1.1rem;
+        animation: moveToLeft 1s ease-out;
+    }
+}
